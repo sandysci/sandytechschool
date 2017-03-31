@@ -20,6 +20,7 @@ import { CourseEditComponent } from './course-edit/course-edit.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,7 @@ import { RegisterComponent } from './register/register.component';
     CourseDetailComponent,
     CourseEditComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

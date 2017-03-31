@@ -1127,6 +1127,7 @@ h2.typoh2{
     border: none;
 }
 .contact-left  input[type="text"],.contact-left  input[type="email"],.contact-left  input[type="password"], .contact-left  textarea {
+
     width: 100%;
     padding: 0.8em;
     font-size: 1em;

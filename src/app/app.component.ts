@@ -26,4 +26,5 @@ export class AppComponent {
     this.isUser =false;
     // this.router.navigate(['/home']);
   }
+
 }

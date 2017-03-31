@@ -24,8 +24,8 @@ export class CoursesService {
 
 
   getCourse(){
-    return this.api.getUrl(`${this.baseUrl}${this.url}`).map(res=>res.json()).do(res=>console.log(res)).catch(this.handleServerError);
-    
+
+    return this.api.getUrl(`${this.baseUrl}${this.url}`).map(res=>res.json()).do(res=>console.log(res)).catch(this.handleServerError);    
   }
 
    postCourse(data){
@@ -45,6 +45,7 @@ export class CoursesService {
   // }
   getCoursedetail(id:number){
    return this.getCourse().map(courses=>courses.courses.find(course => course.id == id));
+
   }
    
 }

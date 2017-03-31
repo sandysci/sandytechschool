@@ -43,7 +43,6 @@ readThis(inputValue: any): void {
     //    this.myInputVariable.nativeElement.value ='';
     // }
     
-    
   }
 
 }

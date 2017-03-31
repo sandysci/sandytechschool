@@ -1,6 +1,7 @@
 <input type ="text"  #editform  [ngStyle]="{'color':'white', 'font-size':'2px','max-width':'0px'}">
 <app-add-comment [hidden] = "!showeditcourse" (newComment)= "handleNewCourse($event)"  ></app-add-comment>
 <app-course-edit [hidden] = "showeditcourse" [getedit] = "geteditcourse" (editComment)= "handleEditCourse($event)"></app-course-edit>
+
 		<!--<div class="banner-w3agile">
 			<div class="container">
 				<h3><a routerLink="">Home</a> / <span>Courses</span></h3>

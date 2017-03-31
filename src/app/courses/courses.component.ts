@@ -70,6 +70,7 @@ export class CoursesComponent implements OnInit {
   
   ngOnInit() {
      this.getCourse();
+
     //  console.log(this.storage.getlocalStorage('sandy'));
   }
 
