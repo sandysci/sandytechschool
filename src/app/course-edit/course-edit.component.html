@@ -1,0 +1,37 @@
+<div class="content">
+		<div class="courses-w3ls">
+			<div class="container">
+			<div class="col-md-8 contact-left cont">
+					<div class="contct-info">
+							<h4>Edit Course</h4>
+              <!--{{getedit|json}} 
+              <div *ngIf="getedit">
+              {{getedit.name |json}}
+            </div>          -->
+             
+							<form (ngSubmit)="StoreCourseEdit()">
+								<div class="row" *ngIf="getedit">
+									<div class="col-md-6 row-grid">
+									<input type="text" [(ngModel)]="getedit.name" name="name" >
+									</div>
+										<div class="col-md-6 row-grid">
+											<input type="text"  [(ngModel)]="getedit.code" name="code">
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 row-grid">
+									<label>Picture</label>
+									 <input type="file" (change)="onChangeFile($event)" accept="image/*"/>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<textarea *ngIf="getedit" placeholder="Description" [(ngModel)]="getedit.description" name="description" ></textarea>
+								<input type="submit" value="Update" >
+								<input type="reset" value="Clear" >
+					</form>
+				</div>
+		</div>
+		</div>
+	</div>
+</div>

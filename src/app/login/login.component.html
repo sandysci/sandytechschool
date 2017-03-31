@@ -1,0 +1,34 @@
+<div class="content">
+		<div class="courses-w3ls">
+			<div class="container">
+			<div class="col-md-8 contact-left cont">
+					<div class="contct-info">
+						<div class="content" [ngBusy]="busy">
+							<h4>Login User</h4>
+							<div *ngIf ="errormessage">{{errormessage.error|json}}</div>
+							<div *ngIf ="success">{{success}}</div>
+              <!--<div *ngIf ="token">{{token}}</div>-->
+							<form (ngSubmit)="loginUser()">
+								<div class="row">
+										<div class="col-md-12 row-grid">
+											<input type="email" [(ngModel)]="LoginData.email" placeholder="e.g sandy**@gmail.com" name="email" required>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 row-grid">
+									 <input type="password"[(ngModel)]="LoginData.password" placeholder="password" name="password" required>
+									</div>
+                 
+									<div class="clearfix"></div>
+								</div>
+					
+								<input type="submit" value="Login" >
+								<input type="reset" value="Clear" >
+					</form>
+				</div>
+				<!--</div>-->
+		</div>
+		</div>
+	</div>
+</div>

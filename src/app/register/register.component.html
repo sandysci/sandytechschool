@@ -1,0 +1,40 @@
+<div class="content">
+		<div class="courses-w3ls">
+			<div class="container">
+			<div class="col-md-8 contact-left cont">
+				
+					<div class="contct-info">
+						
+							<h4>Register User</h4>
+							<div *ngIf ="errormessage">{{errormessage.message|json}}</div>
+							<div *ngIf ="success">{{success}}</div>
+							<div class="content" [ngBusy]="busy">
+							<form (ngSubmit)="StoreUser()">
+								<div class="row">
+									<div class="col-md-6 row-grid">
+									<input type="text" [(ngModel)]="RegisterData.name" placeholder="Name" name="name" required>
+									</div>
+										<div class="col-md-6 row-grid">
+											<input type="email"[(ngModel)]="RegisterData.email" placeholder="Email" name="email" required>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 row-grid">
+									 <input type="password"[(ngModel)]="RegisterData.password" placeholder="password" name="password" required>
+									</div>
+                  <div class="col-md-6 row-grid">
+									 <input type="password" [(ngModel)]="RegisterData.password_confirmation" placeholder="confirm password" name="password_confirmation" required>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+					
+								<input type="submit" value="Submit" >
+								<input type="reset" value="Clear" >
+					</form>
+				</div>
+				<!--</div>-->
+		</div>
+		</div>
+	</div>
+</div>

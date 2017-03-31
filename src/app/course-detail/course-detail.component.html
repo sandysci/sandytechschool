@@ -1,0 +1,27 @@
+
+		<!--content-->
+    <button class="btn btn-warning" (click)="goback()">back</button>
+		<div class="content" *ngIf="course">
+			<div class="courses-w3ls">
+				<div class="container">
+					<h2 class="tittle">Course {{course.name}}</h2>
+					<div class="course-grids">
+						<div class="col-md-6 course-grid" >
+							<div class="mask">
+								<img [src]="url+course.picture_url" class="img-responsive zoom-img" />
+							</div>
+						</div>
+						<div class="col-md-6 course-grid1 gri">
+							<h4>Name : {{course.name}}</h4>
+              <h4>Code : {{course.name}}</h4>
+							
+							<p>{{course.description}}</p>
+							
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+				
+

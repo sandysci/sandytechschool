@@ -1,0 +1,70 @@
+	<div class="header">
+			<div class="header-top">
+				<div class="container">
+					<div class="detail">
+						<ul>
+							<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> 07063540781</li>
+							<li><i class="glyphicon glyphicon-time" aria-hidden="true"></i> Mon-Fri 9:00 Am to 16:00 Pm </li>
+							<li *ngIf="isUser">
+								<span *ngIf ="userDetail" >Welcome {{userDetail.name}}</span>
+							</li>
+						</ul>
+					</div>
+					<div class="indicate">
+						<p><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>We bring out the best in you</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="container">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+				<!---Brand and toggle get grouped for better mobile display-->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>				  
+							<div class="navbar-brand">
+								<h1><a routerLink="">SandyTech <span>School</span></a>
+							
+								</h1>
+							</div>
+						</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<nav class="link-effect-2" id="link-effect-2">
+								<ul class="nav navbar-nav">
+									<li class="active"><a routerLink=""><span data-hover="Home">Home</span></a></li>
+									<li *ngIf = "!isLoggedin"><a routerLink="login"><span data-hover="Login">Login</span></a></li>
+									<li *ngIf = "!isLoggedin"><a routerLink="register"><span data-hover="Register">Register</span></a></li>
+									<li *ngIf = "isLoggedin"><a routerLink="courses"><span data-hover="Courses">Courses</span></a></li>
+									<li *ngIf = "isLoggedin"><a routerLink="contact"><span data-hover="Contact">Contact</span></a></li>
+									<li *ngIf = "isLoggedin"><a (click) ="Logout()"><span data-hover="Logout">Logout</span></a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	<!--header-->
+  <router-outlet></router-outlet>
+  	<!---copy-->
+			<div class="copy-section">
+				<div class="container">
+					<div class="social-icons">
+						<a href="#"><i class="icon1"></i></a>
+						<a href="#"><i class="icon2"></i></a>
+						<a href="#"><i class="icon3"></i></a>
+						<a href="#"><i class="icon4"></i></a>
+					</div>
+					<div class="copy">
+						<p>&copy; 2016  sandy . All rights reserved | Inspired by <a href="http://gitlab.com.com">sandytech</a></p>
+					</div>
+				</div>
+			</div>
+			<!---copy-->

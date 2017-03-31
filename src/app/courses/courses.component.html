@@ -1,0 +1,78 @@
+<input type ="text"  #editform  [ngStyle]="{'color':'white', 'font-size':'2px','max-width':'0px'}">
+<app-add-comment [hidden] = "!showeditcourse" (newComment)= "handleNewCourse($event)"  ></app-add-comment>
+<app-course-edit [hidden] = "showeditcourse" [getedit] = "geteditcourse" (editComment)= "handleEditCourse($event)"></app-course-edit>
+		<!--<div class="banner-w3agile">
+			<div class="container">
+				<h3><a routerLink="">Home</a> / <span>Courses</span></h3>
+			</div>
+			
+			
+		</div>
+				-->
+			
+		<!--<div class="serach-w3agile">
+			<div class="container">
+				<h3 class="tittle2">Search Courses</h3>
+				<div class="place-grids">
+					<div class="col-md-2 place-grid">
+						<select class="sel">
+							<option value="">Categories</option>
+						</select>
+					</div>
+					<div class="col-md-2 place-grid">
+						<select class="sel">
+							<option value="">Course Tags</option>
+						</select>
+					</div>
+					<div class="col-md-2 place-grid">
+						<select class="sel">
+							<option value="">Discipline</option>
+						</select>
+					</div>
+					<div class="col-md-2 place-grid">
+						<select class="sel">
+							<option value="">Duration</option>
+						</select>
+					</div>
+					<div class="col-md-4 place-grid">
+						<form action="#" method="post">
+							<input type="submit" value="Search">
+						</form>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		-->
+		<!--content-->
+		<div class="content">
+			<div class="courses-w3ls">
+				<div class="container">
+					<h2 class="tittle">Our Courses</h2>
+					<div *ngFor ="let course of courses">
+					<div class="course-grids">
+						<div class="col-md-6 course-grid" *ngIf ="course.picture_url" >
+							<div class="mask">
+								<img [src]="url+course.picture_url" class="img-responsive zoom-img" />
+							</div>
+						</div>
+						<div class="col-md-6 course-grid1 gri">
+							<h4>{{course.name}}</h4>
+							
+							<p>{{course.description}}</p>
+							<ul class="grid-part">
+								<li><i class="glyphicon glyphicon-ok-sign"> </i>{{course.code}}</li>
+								<li (click) = viewDetail(course)><i class="glyphicon glyphicon-search"> </i>View detail</li>
+								<li (click) = editCourse(course)><i class="glyphicon glyphicon-pencil"> </i>Edit</li>
+								<li (click) = deleteCourse(course.id)><i class="glyphicon glyphicon-trash"> </i>Delete</li>
+							</ul>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+					
+		<!--content-->
+		
