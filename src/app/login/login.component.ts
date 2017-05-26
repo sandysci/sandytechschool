@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { UserService} from '../services/user.service';
 import {StorageService} from '../services/storage.service';
 import {AppComponent} from '../app.component';
@@ -15,7 +15,9 @@ export class LoginComponent implements OnInit {
 
   busy: Subscription;
   config = {};
-  constructor(private http:UserService , private storage:StorageService,private router :Router, private app :AppComponent) {
+  constructor(private http:UserService ,
+   private storage:StorageService,private router :Router,
+    @ViewChild(AppComponent) private app :AppComponent) {
 
    }
 

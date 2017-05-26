@@ -34,8 +34,14 @@ export class RegisterComponent implements OnInit {
     this.errormessage ='';
     this.user =this.RegisterData;  
     // return this.http.storeUser(this.user).subscribe( data => console.log(data));
-    this.busy= this.http.storeUser(this.user).subscribe( data =>{console.log(data),this.RegisterData ={} ,this.success ="Registration Succesfully,you can login in now",this.router.navigate(['/login']);},
-    error =>{ this.errormessage = JSON.parse(error._body),console.log(JSON.parse(error._body).message)});
+    this.busy= this.http.storeUser(this.user).subscribe( data =>
+    {console.log(data),
+     this.RegisterData ={} ,
+     this.success ="Registration Succesfully,you can login in now",
+     this.router.navigate(['/login']);
+    },
+    error =>
+    { this.errormessage = JSON.parse(error._body),console.log(JSON.parse(error._body).message)});
      
     
 

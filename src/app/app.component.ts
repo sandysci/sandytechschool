@@ -24,7 +24,7 @@ export class AppComponent {
     this.user.Logout();
     this.isLoggedin = false;
     this.isUser =false;
-    // this.router.navigate(['/home']);
+    this.router.navigate(['/home']);
   }
 
 }

@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  baseUrl:'http://localhost:8000/api/v1/',
-  url:'http://localhost:8000/'
+  baseUrl:'http://sandytech.sci.ng/api/v1/',
+  url:'http://sandytech.sci.ng/'
 };

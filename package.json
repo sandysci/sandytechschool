@@ -20,23 +20,10 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
-<<<<<<< HEAD
     "angular2-busy": "^1.0.2",
-=======
->>>>>>> 97de6166962e6b952e519294b92f7bebecd6e5cb
-    "core-js": "^2.4.1",
-    "rxjs": "^5.1.0",
-    "zone.js": "^0.7.6"
-  },
-  "devDependencies": {
-<<<<<<< HEAD
     "@angular/cli": "^1.0.0",
     "@angular/compiler-cli": "^2.4.0",
     "@ngtools/webpack": "^1.2.13",
-=======
-    "@angular/cli": "1.0.0-rc.1",
-    "@angular/compiler-cli": "^2.4.0",
->>>>>>> 97de6166962e6b952e519294b92f7bebecd6e5cb
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
@@ -45,15 +32,9 @@
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
-<<<<<<< HEAD
     "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-=======
-    "karma-jasmine": "~1.1.0",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
->>>>>>> 97de6166962e6b952e519294b92f7bebecd6e5cb
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.4.2",
