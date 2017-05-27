@@ -45,7 +45,7 @@ import { RegisterComponent } from './register/register.component';
     //         storageType: 'localStorage'
     //     })
   ],
-  exports:[BusyModule],
+  // exports:[BusyModule],
   providers: [ApiService,CoursesService,UserService,StorageService],
   bootstrap: [AppComponent]
 })
