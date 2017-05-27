@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
-import { LocalStorageService } from 'angular-2-local-storage';
+// import { LocalStorageService } from 'angular-2-local-storage';
 
 @Injectable()
 export class StorageService {
 
-  constructor(private localStorageService: LocalStorageService) { 
+  constructor() { 
 
   }
 
   setlocalStorage(key,value){
-    return this.localStorageService.set(key,value);
+    return localStorage.setItem(key,value);
 
   }
   getlocalStorage(key){
-    return this.localStorageService.get(key);
+    return localStorage.getItem(key);
 
   }
   removelocalStorage(key){
-    return this.localStorageService.remove(key);
+    return localStorage.removeItem(key);
   }
 
 }

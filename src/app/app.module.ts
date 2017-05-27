@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import {BusyModule} from 'angular2-busy';
 import { AppRoutingModule } from './app-routing.modules';
 
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CoursesComponent } from './courses/courses.component';
@@ -38,10 +39,11 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    LocalStorageModule.withConfig({
-            prefix: 'my-app',
-            storageType: 'localStorage'
-        })
+    BusyModule
+    // LocalStorageModule.withConfig({
+    //         prefix: 'my-app',
+    //         storageType: 'localStorage'
+    //     })
   ],
   exports:[BusyModule],
   providers: [ApiService,CoursesService,UserService,StorageService],
