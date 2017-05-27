@@ -38,7 +38,6 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    BusyModule, 
     LocalStorageModule.withConfig({
             prefix: 'my-app',
             storageType: 'localStorage'
