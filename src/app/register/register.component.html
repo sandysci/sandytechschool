@@ -8,7 +8,7 @@
 							<h4>Register User</h4>
 							<div *ngIf ="errormessage">{{errormessage.message|json}}</div>
 							<div *ngIf ="success">{{success}}</div>
-							<div class="content" [ngBusy]="busy">
+							<div class="content" >
 							<form (ngSubmit)="StoreUser()">
 								<div class="row">
 									<div class="col-md-6 row-grid">

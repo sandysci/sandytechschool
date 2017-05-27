@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   
-  busy:Subscription;
+ 
 
   constructor(private http:UserService,private storage:StorageService,private router:Router) { }
   private RegisterData = {};
@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     this.errormessage ='';
     this.user =this.RegisterData;  
     // return this.http.storeUser(this.user).subscribe( data => console.log(data));
-    this.busy= this.http.storeUser(this.user).subscribe( data =>
+    this.http.storeUser(this.user).subscribe( data =>
     {console.log(data),
      this.RegisterData ={} ,
      this.success ="Registration Succesfully,you can login in now",

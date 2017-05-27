@@ -13,7 +13,7 @@ import {Subscription} from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 
-  busy: Subscription;
+  // busy: Subscription;
   config = {};
   constructor(private http:UserService ,
    private storage:StorageService,private router :Router,
@@ -44,7 +44,7 @@ createAuthorizationHeader(headers:Headers,value) {
   private loginUser(){
     this.success ='';
     this.errormessage = '';
-    this.busy= this.http.loginUser(this.LoginData).subscribe(data=>{
+   this.http.loginUser(this.LoginData).subscribe(data=>{
       this.token = 'Bearer{'+data.token+'}',
       this.head=this.createAuthorizationHeader(this.header,this.token);
       console.log(this.head);

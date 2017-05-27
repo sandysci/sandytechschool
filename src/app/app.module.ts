@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {BusyModule} from 'angular2-busy';
+// import {BusyModule} from 'angular2-busy';
 import { AppRoutingModule } from './app-routing.modules';
 
 
@@ -39,7 +39,7 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    BusyModule
+    //  BusyModule
     // LocalStorageModule.withConfig({
     //         prefix: 'my-app',
     //         storageType: 'localStorage'
