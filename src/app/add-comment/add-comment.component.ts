@@ -13,7 +13,7 @@ export class AddCommentComponent implements OnInit {
 
  
 
-  CourseData = {'picture_url':'' };
+  CourseData = {};
 
   @Output() newComment = new EventEmitter();
  
@@ -28,8 +28,8 @@ readThis(inputValue: any): void {
   var myReader:FileReader = new FileReader();
 
   myReader.onloadend = (e) => {
-    this.CourseData.picture_url = myReader.result;
-    console.log(this.CourseData.picture_url);
+     this.CourseData['picture_url'] = myReader.result;
+    console.log(this.CourseData);
   }
   myReader.readAsDataURL(file);
 }
