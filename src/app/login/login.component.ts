@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     
   }
   
-  public LoginData ={};
+  public LoginData = {'email':'','password':''};
   public success;
   public errormessage;
   public token ;
@@ -49,7 +49,7 @@ createAuthorizationHeader(headers:Headers,value) {
       this.head=this.createAuthorizationHeader(this.header,this.token);
       console.log(this.head);
       this.storage.setlocalStorage('token',this.token);
-      this.LoginData = {};
+      this.LoginData =  {'email':'','password':''};
       this.app.isLoggedin =true;
       this.http.getUser({"headers":this.head}).subscribe(data=>
       {this.app.userDetail = data.user,this.storage.setlocalStorage('user',data.user),this.app.isUser=true },error=>console.log(error))

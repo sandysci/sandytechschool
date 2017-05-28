@@ -15,15 +15,15 @@ import {Course} from './courses';
 export class CoursesComponent implements OnInit {
   @ViewChild('editform') editformvariable : ElementRef;
  
-  private showeditcourse :boolean = true; 
-  private courses:Array<any> ;
-  private errorMessage;
+  public showeditcourse :boolean = true; 
+  public courses:Array<any> ;
+  public errorMessage;
   
-  private geteditcourse;
+  public geteditcourse;
 
   @Output() course_s =new EventEmitter();
-  private url = environment.url;
-  constructor(private http:CoursesService,private _router:Router,private _renderer:Renderer,private storage:StorageService) { }
+  public url = environment.url;
+  constructor(public http:CoursesService,public _router:Router,public _renderer:Renderer,public storage:StorageService) { }
 
   getCourse(){
     return this.http.getCourse().subscribe(res => {

@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
  
 
   constructor(public http:UserService,public storage:StorageService,public router:Router) { }
-  public RegisterData = {};
+  public RegisterData = {'name':'','email':'','password':'','password_confirmation':''};
   public user ={};
   public success;
   public errormessage;
@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
     // return this.http.storeUser(this.user).subscribe( data => console.log(data));
     this.http.storeUser(this.user).subscribe( data =>
     {console.log(data),
-     this.RegisterData ={} ,
+     this.RegisterData ={'name':'','email':'','password':'','password_confirmation':''} ,
      this.success ="Registration Succesfully,you can login in now",
      this.router.navigate(['/login']);
     },

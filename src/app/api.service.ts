@@ -6,7 +6,7 @@ import {Course} from './courses/courses';
 @Injectable()
 export class ApiService {
 
-  constructor(private http:Http) {
+  constructor(public http:Http) {
 
    }
    getUrl(url):Observable<any>{

@@ -12,19 +12,19 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class UserService {
 
- private baseurl = environment.baseUrl;
- private userurl ='user';
- private authenticateurl = 'authenticate'; 
+ public baseurl = environment.baseUrl;
+ public userurl ='user';
+ public authenticateurl = 'authenticate'; 
 
-  constructor(private http: ApiService,private storage:StorageService) {
+  constructor(public http: ApiService,public storage:StorageService) {
     
    }
-   private getError(error: Response): Observable<any>{
+   public getError(error: Response): Observable<any>{
       console.log(error);
       return Observable.throw(error.json() || 'Server Issue');
   }
 
-  private handleError(error:Response){
+  public handleError(error:Response){
     return Observable.throw(error.json() ||"server error");
    }
 
