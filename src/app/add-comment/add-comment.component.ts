@@ -13,7 +13,7 @@ export class AddCommentComponent implements OnInit {
 
  
 
-  CourseData = {};
+  CourseData = {'name':'','code':'','description':''};
 
   @Output() newComment = new EventEmitter();
  
@@ -36,7 +36,7 @@ readThis(inputValue: any): void {
   StoreCourse(){
     // alert(this.CourseData)
      this.newComment.emit(this.CourseData);
-     this.CourseData ={'picture_url':'' };
+      this.CourseData['picture_url'] = '';
      this.myInputVariable.nativeElement.value ='';
     // this.myInputVariable.nativeElement.reset();
       console.log(this.CourseData);
