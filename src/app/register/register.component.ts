@@ -13,14 +13,14 @@ export class RegisterComponent implements OnInit {
   
  
 
-  constructor(private http:UserService,private storage:StorageService,private router:Router) { }
-  private RegisterData = {};
-  private user ={};
-  private success;
-  private errormessage;
+  constructor(public http:UserService,public storage:StorageService,public router:Router) { }
+  public RegisterData = {};
+  public user ={};
+  public success;
+  public errormessage;
   //  message:string  ="message";
 
-  //  private user:Array<any> ;
+  //  public user:Array<any> ;
 
 
   ngOnInit() {

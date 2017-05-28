@@ -15,9 +15,9 @@ export class LoginComponent implements OnInit {
 
   // busy: Subscription;
   config = {};
-  constructor(private http:UserService ,
-   private storage:StorageService,private router :Router,
-    @ViewChild(AppComponent) private app :AppComponent) {
+  constructor(public http:UserService ,
+   public storage:StorageService,public router :Router,
+    @ViewChild(AppComponent) public app :AppComponent) {
 
    }
 
@@ -27,11 +27,11 @@ export class LoginComponent implements OnInit {
     
   }
   
-  private LoginData ={};
-  private success;
-  private errormessage;
-  private token ;
-  private head;
+  public LoginData ={};
+  public success;
+  public errormessage;
+  public token ;
+  public head;
   header = new Headers();
   //place the token in the header
 createAuthorizationHeader(headers:Headers,value) {
@@ -41,7 +41,7 @@ createAuthorizationHeader(headers:Headers,value) {
   }
 
 
-  private loginUser(){
+  public loginUser(){
     this.success ='';
     this.errormessage = '';
    this.http.loginUser(this.LoginData).subscribe(data=>{

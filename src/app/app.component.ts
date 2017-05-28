@@ -11,7 +11,7 @@ declare var $:any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private storage:StorageService,private user:UserService ,private router:Router){
+  constructor(public storage:StorageService,public user:UserService ,public router:Router){
 
   }
   

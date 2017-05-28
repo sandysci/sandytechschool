@@ -13,14 +13,14 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./course-detail.component.css']
 })
 export class CourseDetailComponent implements OnInit {
-  private id:number;
-  private course;
-  private url = environment.url;
+  public id:number;
+  public course;
+  public url = environment.url;
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private http: CoursesService,
-    private location:Location,
+    public route: ActivatedRoute,
+    public router: Router,
+    public http: CoursesService,
+    public location:Location,
   ) { }
 
 getCourse(){

@@ -13,7 +13,7 @@ export class CourseEditComponent implements OnInit {
  @Output() editComment = new EventEmitter();
 
  
-constructor(private http :CoursesService) {
+constructor(public http :CoursesService) {
     }
 
   ngOnInit() {
