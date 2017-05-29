@@ -12,13 +12,14 @@ import 'rxjs/add/operator/catch';
 
 export class CoursesService {
 
-  private url = 'courses';
-  private url2 = 'course';
-  private slash = '\\';
-  private baseUrl = environment.baseUrl;
+  public url = 'courses';
+  public url2 = 'course';
+  public slash = '\\';
+ public baseUrl = 'http://sandytech.sci.ng/api/v1/';
+//  public url = 'http://sandytech.sci.ng/';
 
-  constructor(private api:ApiService) { }
-  private handleServerError(error: Response) {
+  constructor(public api:ApiService) { }
+  public handleServerError(error: Response) {
         return Observable.throw(error.json() || 'Server error'); // Observable.throw() is undefined at runtime using Webpack
     }
 

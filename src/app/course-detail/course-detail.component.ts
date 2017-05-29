@@ -15,7 +15,8 @@ import 'rxjs/add/operator/map';
 export class CourseDetailComponent implements OnInit {
   public id:number;
   public course;
-  public url = environment.url;
+  public baseurl = 'http://sandytech.sci.ng/api/v1/';
+  public url = 'http://sandytech.sci.ng/';
   constructor(
     public route: ActivatedRoute,
     public router: Router,

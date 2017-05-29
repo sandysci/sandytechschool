@@ -14,7 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ApiService } from './services/api.service';
 import { UserService} from './services/user.service';
 import { StorageService} from './services/storage.service';
-import { LocalStorageModule } from 'angular-2-local-storage';
+// import { LocalStorageModule } from 'angular-2-local-storage';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CourseEditComponent } from './course-edit/course-edit.component';

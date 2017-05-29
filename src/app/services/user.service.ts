@@ -11,8 +11,9 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class UserService {
-
- public baseurl = environment.baseUrl;
+public baseurl = 'http://sandytech.sci.ng/api/v1/';
+ public url = 'http://sandytech.sci.ng/';
+//  public baseurl = environment.baseUrl;
  public userurl ='user';
  public authenticateurl = 'authenticate'; 
 

@@ -22,7 +22,7 @@ export class CoursesComponent implements OnInit {
   public geteditcourse;
 
   @Output() course_s =new EventEmitter();
-  public url = environment.url;
+  // public url = environment.url;
   constructor(public http:CoursesService,public _router:Router,public _renderer:Renderer,public storage:StorageService) { }
 
   getCourse(){
