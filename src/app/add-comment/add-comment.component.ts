@@ -8,7 +8,7 @@ import { Component, OnInit,Output,EventEmitter,ViewChild} from '@angular/core';
 
 
 export class AddCommentComponent implements OnInit {
-  
+  //edited this
 @ViewChild('myInput') myInputVariable;
 
  
