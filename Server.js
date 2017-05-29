@@ -1,8 +1,10 @@
-// const express = require('express');
-// const app = express ();
-// app.use(express.static(_dirname+'/dist'));
-// app.listen (process.env.PORT||8080);
-// //force https
+const express = require('express');
+const app = express ();
+app.use(express.static(__dirname+'/dist'));
+app.listen (process.env.PORT||8080,function(){
+    console.log("sandy node"+ process.env.port);
+});
+//force https
 // const forceSSL = function(){
 //     return function(req,res,next){
 //         if(req.headers['x-forwarded-proto'] != 'https'){
@@ -13,19 +15,21 @@
 //         next();
 //     }
 // }
-// //middleware
+//middleware
 // app.use(forceSSL());
 // const path = require('path');
 // app.get('/*',function(req,res){
 //     res.sendFile(path.join( __dirname + '/dist'));
    
 // });
-const express = require('express');
-const app = express();
+// const express = require('express');
+// const app = express();
 
 // Run the app by serving the static files
 // in the dist directory
-app.use(express.static(__dirname + '/dist'));
+// app.use(express.static(__dirname + '/dist'));
 // Start the app by listening on the default
 // Heroku port
-app.listen(process.env.PORT || 8080);
+// app.listen(process.env.PORT || 8080, function() {
+// 	console.log('Node server running on port ' + process.env.PORT)
+// });
