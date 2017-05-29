@@ -10,7 +10,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --prod"
+    "postinstall": "ng build --aot -prod",
+    // "postinstall": "ng build --prod",
+    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "heroku-postbuild": "npm install --prefix ./client"
+    
   },
   "private": true,
   "dependencies": {
